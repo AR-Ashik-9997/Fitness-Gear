@@ -1,9 +1,11 @@
 import React from 'react';
-
+import logo from './../images/logo.jpg';
+import './Header.css';
 const Header = () => {
     return (
-        <div>
-           <h1>this is header</h1> 
+        <div className='container mt-5 d-flex align-items-center'>
+            <img src={logo} alt="" className='img-fluid img rounded-circle' />
+           <h1 className='text-info p-4'>FITNESS GEAR</h1> 
         </div>
     );
 };
