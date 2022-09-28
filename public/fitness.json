@@ -1,0 +1,56 @@
+[
+  {
+    "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    "name": "Deadlift",
+    "description": "Arguably the king of all exercises, the deadlift hits every major muscle group hard and is perhaps the greatest test of strength there is.",
+    "age": "24-39",
+    "time": 90,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+    "name": "Back squat",
+    "description": "Just like the deadlift, the barbell back squat hits just about every major muscle group there is in the body and is the king of leg-developing movements. Any athlete will tout the squat as the reason they run fast, jump high, and keep increasing in strength all over. ",
+    "age": "30-50",
+    "time": 600,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1294&q=80"
+  },
+  {
+    "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+    "name": "Pullup",
+    "description": "Nothing quite says “I’m big” like a wide set of shoulders; a wide back doesn’t hurt either. The best move for developing those big, fan-shaped muscles (latissimus dorsi, aka, the lats) that make your shoulders look wide is the traditional pullup. It’s a big, multijoint move, which leads to testosterone release, meaning strength and overall muscle development will be enhanced.",
+    "age": "18-30",
+    "time": 900,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1502955717682-d0430000b16d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
+    "name": "Dumbbell",
+    "description": "Dumbbells are often used for joint-isolation exercises such as biceps curls, chest flyes or shoulder raises. Using dumbbells for full-body, multiplanar movements, however, can provide a variety of different strength outcomes.",
+    "age": "15-35",
+    "time": 300,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1082&q=80"
+  },
+  {
+    "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
+    "name": "Pushup",
+    "description": "Pushups are an exercise in which a person, keeping a prone position, with the hands palms down under the shoulders, the balls of the feet on the ground, and the back straight, pushes the body up and lets it down by an alternate straightening and bending of the arms.",
+    "age": "18-40",
+    "time": 600,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
+    "name": "Battle Rope",
+    "description": "Battling ropes (also known as battle ropes or heavy ropes) are used for fitness training to increase full body strength and conditioning. It was designed by John Brookfield, who developed the system around 2006 in his backyard. It can be alternatively used as a resistance training technique.",
+    "age": "20-40",
+    "time": 1200,
+    "quantity": 0,
+    "img": "https://images.unsplash.com/photo-1546749876-2088f8b19e09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  }
+]
