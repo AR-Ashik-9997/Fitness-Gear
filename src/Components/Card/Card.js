@@ -1,23 +1,19 @@
 import React from "react";
 import "./Card.css";
 const Card = (props) => {
-  
+  const { name, description, age, time, img } = props.fitness;
   return (
     <div className="col-lg-4">
-      <div className="card">
-        <img src="" className="card-img-top" alt="" />
+      <div className="card mb-4">
+        <img src={img} className="card-img" alt="" />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
+          <h5 className="card-title fs-3 fw-bold">{name}</h5>
+          <p className="card-text">{description}</p>
+          <p className="fw-bold">For age: {age}</p>
+          <p className="fw-bold">Time required: {time}s</p>
+          <button className="btn btn-primary w-100">Add to list</button>
         </div>
       </div>
-      
     </div>
   );
 };
