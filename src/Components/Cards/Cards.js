@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import "./Cards.css";
 import logo from './../images/logo.jpg';
+import Activity from "../Activity/Activity";
 
 const Cards = () => {
   const [fitnesses, setFitnesses] = useState([]);
@@ -28,8 +29,8 @@ const Cards = () => {
           </div>
         </div>
       </div>
-      <div className="activity-container bg-danger">
-        <h1>hello activity</h1>
+      <div className="activity-container container">
+        <Activity></Activity>
       </div>
     </div>
   );
