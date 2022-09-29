@@ -4,8 +4,6 @@ import "./Cards.css";
 import logo from './../images/logo.jpg';
 import Activity from "../Activity/Activity";
 
-
-
 const Cards = () => {
   const [fitnesses, setFitnesses] = useState([]);
   const [activities,setActivities]=useState([]);
