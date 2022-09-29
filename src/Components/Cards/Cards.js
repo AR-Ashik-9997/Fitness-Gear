@@ -37,7 +37,7 @@ const Cards = () => {
           </div>
         </div>
       </div>
-      <div className="activity-container container">
+      <div className="activity-container container mb-5">
         <Activity activities={activities}></Activity>
       </div>
     </div>
