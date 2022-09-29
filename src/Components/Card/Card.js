@@ -11,7 +11,7 @@ const Card = (props) => {
           <p className="card-text">{description}</p>
           <p className="fw-bold">For age: {age}</p>
           <p className="fw-bold">Time required: {time}s</p>
-          <button className="btn btn-primary w-100">Add to list</button>
+          <button className="btn btn-primary w-100" onClick={()=>props.handleAddToActivity(props.fitness)}>Add to list</button>
         </div>
       </div>
     </div>

@@ -13,3 +13,7 @@
     background-color: #0d6efd;
     color: white;
   }
+  .activity{
+    position: sticky;
+    top: 0;
+  }

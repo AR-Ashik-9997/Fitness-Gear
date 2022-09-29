@@ -4,13 +4,21 @@ import "./Cards.css";
 import logo from './../images/logo.jpg';
 import Activity from "../Activity/Activity";
 
+
+
 const Cards = () => {
   const [fitnesses, setFitnesses] = useState([]);
+  const [activities,setActivities]=useState([]);
   useEffect(() => {
     fetch("fitness.json")
       .then((res) => res.json())
       .then((data) => setFitnesses(data));
   }, []);
+  const handleAddToActivity=(fitnesses)=>{
+    const newActivity=[...activities,fitnesses];
+    setActivities(newActivity);
+  
+  }
   return (
     <div className="main-container">
       <div className="cards-container container mt-5 mb-4">
@@ -23,14 +31,14 @@ const Cards = () => {
           <div className="col-lg-10">
             <div className="row g-4">
               {fitnesses.map((fitness) => (
-                <Card key={fitness.id} fitness={fitness}></Card>
+                <Card key={fitness.id} fitness={fitness} handleAddToActivity={handleAddToActivity}></Card>
               ))}
             </div>
           </div>
         </div>
       </div>
       <div className="activity-container container">
-        <Activity></Activity>
+        <Activity activities={activities}></Activity>
       </div>
     </div>
   );

@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {addToDb, getStoredTime} from "../../Utilities/localStorage";
 import pic from "./../images/ar.jpg";
 import "./Activity.css";
 
-const Activity = () => {
+const Activity = (props) => {
+  const { activities } = props;
+  let time = 0;
+  for (const activity of activities) {
+    time = time + activity.time;
+  }
+  const [exTimes, setExTimes] = useState([0]); 
+  const handleAddToTime = (e) => {
+    setExTimes(e.target.value);
+    addToDb(e.target.value);   
+
+  };
+  
+  useEffect(()=>{    
+    const getTime=getStoredTime();
+   setExTimes(getTime);
+    
+  },[])
   return (
-    <div className="container">
+    <div className="container activity">
       <div className="d-flex align-items-center mt-4">
         <img src={pic} alt="" className="img rounded-circle" />
         <div className="p-2">
@@ -28,22 +46,54 @@ const Activity = () => {
       </div>
       <h4 className="mt-4">Add a Break</h4>
       <div className="d-flex align-items-center justify-content-evenly mt-4 shadow-none p-3 mb-5 bg-light rounded">
-        <button className="btn-round btn-btn-primary">10s</button>
-        <button className="btn-round btn-primary">30s</button>
-        <button className="btn-round btn-primary">20s</button>
-        <button className="btn-round btn-primary">40s</button>
-        <button className="btn-round btn-primary">50s</button>
+        <button
+          className="btn-round btn-btn-primary"
+          onClick={handleAddToTime}
+          value="10"
+        >
+          10s
+        </button>
+        <button
+          className="btn-round btn-primary"
+          onClick={(e) => handleAddToTime(e)}
+          value="30"
+        >
+          30s
+        </button>
+        <button
+          className="btn-round btn-primary"
+          onClick={(e) => handleAddToTime(e)}
+          value="20"
+        >
+          20s
+        </button>
+        <button
+          className="btn-round btn-primary"
+          onClick={(e) => handleAddToTime(e)}
+          value="40"
+        >
+          40s
+        </button>
+        <button
+          className="btn-round btn-primary"
+          onClick={(e) => handleAddToTime(e)}
+          value="50"
+        >
+          50s
+        </button>
       </div>
       <h4 className="mt-5">Excersise Details</h4>
       <div className="mt-3 d-flex justify-content-between align-items-center shadow-none p-3 mb-4 bg-light rounded">
         <h5>Excersise time</h5>
-        <p>0 seconds</p>
+        <p id="times">{exTimes} seconds</p>
       </div>
       <div className="d-flex justify-content-between align-items-center shadow-none p-3 mb-5 bg-light rounded">
         <h5>Break time</h5>
-        <p>0 seconds</p>
+        <p>{time} seconds</p>
       </div>
-      <button className="btn btn-primary w-100 fw-bold">Activity Completed</button>
+      <button className="btn btn-primary w-100 fw-bold">
+        Activity Completed
+      </button>
     </div>
   );
 };
