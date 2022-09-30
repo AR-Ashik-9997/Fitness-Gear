@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import {addToDb, getStoredTime} from "../../Utilities/localStorage";
+import { addToDb, getStoredTime } from "../../Utilities/localStorage";
 import pic from "./../images/ar.jpg";
 import "./Activity.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Activity = (props) => {
   const { activities } = props;
@@ -9,20 +11,19 @@ const Activity = (props) => {
   for (const activity of activities) {
     time = time + activity.time;
   }
-  const [exTimes, setExTimes] = useState([0]); 
+  const [exTimes, setExTimes] = useState([]);
   const handleAddToTime = (e) => {
     setExTimes(e.target.value);
-    addToDb(e.target.value);   
-
+    addToDb(e.target.value);
   };
-  
-  useEffect(()=>{    
-    const getTime=getStoredTime();
-   setExTimes(getTime);
-    
-  },[])
+
+  useEffect(() => {
+    const getTime = getStoredTime();
+    setExTimes(getTime);
+  }, []);
+  const notify = () => toast("congratulation you are done with your activity");
   return (
-    <div className="container activity">
+    <div className="container activity mb-5">
       <div className="d-flex align-items-center mt-4">
         <img src={pic} alt="" className="img rounded-circle" />
         <div className="p-2">
@@ -85,15 +86,16 @@ const Activity = (props) => {
       <h4 className="mt-5">Excersise Details</h4>
       <div className="mt-3 d-flex justify-content-between align-items-center shadow-none p-3 mb-4 bg-light rounded">
         <h5>Excersise time</h5>
-        <p id="times">{exTimes} seconds</p>
+        <p>{time} seconds</p>
       </div>
       <div className="d-flex justify-content-between align-items-center shadow-none p-3 mb-5 bg-light rounded">
         <h5>Break time</h5>
-        <p>{time} seconds</p>
+        <p id="times">{exTimes ? exTimes : 0} seconds</p>
       </div>
-      <button className="btn btn-primary w-100 fw-bold">
+      <button className="btn btn-primary w-100 fw-bold" onClick={notify}>
         Activity Completed
       </button>
+      <ToastContainer position="top-center"/>
     </div>
   );
 };

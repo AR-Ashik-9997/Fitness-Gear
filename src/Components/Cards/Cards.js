@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import "./Cards.css";
 import logo from './../images/logo.jpg';
 import Activity from "../Activity/Activity";
+import Question from "../Questions/Question";
 
 const Cards = () => {
   const [fitnesses, setFitnesses] = useState([]);
@@ -34,6 +35,10 @@ const Cards = () => {
             </div>
           </div>
         </div>
+        <div className="col-lg-10">          
+          <Question></Question>
+        </div>
+        
       </div>
       <div className="activity-container container mb-5">
         <Activity activities={activities}></Activity>
